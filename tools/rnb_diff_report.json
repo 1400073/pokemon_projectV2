@@ -1,0 +1,48 @@
+{
+  "missing_species_sample": [
+    "alcremie",
+    "appletun",
+    "applin",
+    "arcaninehisui",
+    "arctovish",
+    "arctozolt",
+    "arrokuda",
+    "articunogalar",
+    "avalugghisui",
+    "barraskewda",
+    "basculegion",
+    "basculinwhitestriped"
+  ],
+  
+  "missing_abilities_sample": [
+    "as one",
+    "chillingneigh",
+    "cottondown",
+    "gorillatactics",
+    "gulpmissile",
+    "hungerswitch",
+    "iceface",
+    "icescales",
+    "libero",
+    "neutralizinggas",
+    "pastelveil",
+    "perishbody",
+    "powerspot",
+    "punkrock",
+    "quickdraw",
+    "ripen",
+    "sandspit",
+    "screencleaner",
+    "steamengine",
+    "steelyspirit",
+    "unseenfist",
+    "wanderingspirit"
+  ],
+  "missing_items_sample": [
+    "blunderpolicy",
+    "ejectpack",
+    "leek",
+    "roomservice",
+    "throatspray"
+  ]
+}

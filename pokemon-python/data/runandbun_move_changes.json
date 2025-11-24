@@ -1,0 +1,1632 @@
+[
+  {
+    "move": "Absorb",
+    "bp": "20 > 40",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Covet",
+    "note": "No longer steal items."
+  },
+  {
+    "move": "Aeroblast",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Dark Void",
+    "note": "Usable by any Pok\u00e9mon that can learn it."
+  },
+  {
+    "move": "Air Cutter",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Defend Order",
+    "note": "Functions like Protect."
+  },
+  {
+    "move": "Air Slash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Destiny Bond",
+    "note": "Can be used multiple times without fail."
+  },
+  {
+    "move": "Aqua Tail",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Explosion",
+    "note": "Halves target's defense on damage calculation."
+  },
+  {
+    "move": "Astonish",
+    "bp": "30 > 40",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Hidden Power",
+    "note": "Type determined by the Pok\u00e9mon IVs, always has 60 BP."
+  },
+  {
+    "move": "Baby-Doll Eyes",
+    "bp": "None",
+    "pp": "30 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Misty Explosion",
+    "note": "Halves target's defense on damage calculation."
+  },
+  {
+    "move": "Barrage",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Self-Destruct",
+    "note": "Halves target's defense on damage calculation."
+  },
+  {
+    "move": "Belch",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Thief",
+    "note": "No longer steal items."
+  },
+  {
+    "move": "Bind",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": "Thunder Wave",
+    "note": "Electric-types cannot miss when using it."
+  },
+  {
+    "move": "Blaze Kick",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Blizzard",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "70% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Blue Flare",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Bolt Strike",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Bone Club",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Bonemerang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Bounce",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Captivate",
+    "bp": "None",
+    "pp": "20 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Charge Beam",
+    "bp": "50 > 40",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "70% > 100%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Charm",
+    "bp": "None",
+    "pp": "20 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Circle Throw",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Clamp",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Comet Punch",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Confide",
+    "bp": "None",
+    "pp": "20 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Covet",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "Normal > Fairy",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Crabhammer",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Cross Chop",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Cut",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Dark Void",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "50% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Diamond Storm",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Double Hit",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Double Slap",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Draco Meteor",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Dragon Rush",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Dragon Tail",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Drill Run",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Dual Chop",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Dual Wingbeat",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Eerie Impulse",
+    "bp": "None",
+    "pp": "15 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Electroweb",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fake Out",
+    "bp": "None",
+    "pp": "10 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fake Tears",
+    "bp": "None",
+    "pp": "20 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Feather Dance",
+    "bp": "None",
+    "pp": "15 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fire Fang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fire Spin",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Flash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "100% > 70%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fleur Cannon",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fly",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Flying Press",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Focus Blast",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "70% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Freeze Shock",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Frenzy Plant",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Frost Breath",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Frustration",
+    "bp": "?? > 102",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fury Attack",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Fury Swipes",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Gear Grind",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Giga Impact",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Glaciate",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Grass Whistle",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "55% > 70%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Growl",
+    "bp": "None",
+    "pp": "40 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Gunk Shot",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hammer Arm",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Harden",
+    "bp": "None",
+    "pp": "40 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Head Smash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Heat Wave",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "High Horsepower",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hurricane",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "70% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hydro Cannon",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hydro Pump",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hyper Beam",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hyper Fang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Hypnosis",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "60% > 70%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Ice Burn",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Ice Fang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Ice Hammer",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Icicle Crash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Icy Wind",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Iron Tail",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Kinesis",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Leaf Storm",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Leaf Tornado",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "50% > 30%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Leech Seed",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Leer",
+    "bp": "None",
+    "pp": "30 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Lick",
+    "bp": "30 > 40",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Light of Ruin",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Lovely Kiss",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Magma Storm",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Mega Drain",
+    "bp": "40 > 60",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Mega Kick",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Mega Punch",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Megahorn",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Metal Claw",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Metal Sound",
+    "bp": "None",
+    "pp": "40 > 5",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Meteor Beam",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Meteor Mash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Mirror Shot",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "30% > 20%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Misty Explosion",
+    "bp": "100 > 200",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Mud Bomb",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "30% > 20%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Muddy Water",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Nature's Madness",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Night Daze",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "40% > 30%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Noble Roar",
+    "bp": "None",
+    "pp": "30 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Octazooka",
+    "bp": "65 > 80",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "50% > 30%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Origin Pulse",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Overheat",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Pin Missile",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Play Nice",
+    "bp": "None",
+    "pp": "20 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Play Rough",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Poison Powder",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Power Whip",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Precicipe Blades",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Psycho Boost",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Razor Leaf",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Razor Shell",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Return",
+    "bp": "?? > 102",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Roar of Time",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Blast",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Climb",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 95%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Slide",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Smash",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "None",
+    "effect_chance": "50% > 100%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Throw",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rock Wrecker",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Rolling Kick",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Roost",
+    "bp": "None",
+    "pp": "10 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sacred Fire",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sand Tomb",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sand-Attack",
+    "bp": "None",
+    "pp": "15 > 5",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Scale Shot",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Screech",
+    "bp": "None",
+    "pp": "15 > 5",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Seed Flare",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sing",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "55% > 70%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Skitter Smack",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sky Attack",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sky Uppercut",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Slam",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sleep Powder",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Smog",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "70% > 90%",
+    "effect_chance": "40% > 100%",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Snarl",
+    "bp": "None",
+    "pp": "15 > 10",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sonic Boom",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Spacial Rend",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Steam Eruption",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Steel Beam",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Steel Wing",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Stone Edge",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 85%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Strange Steam",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Struggle Bug",
+    "bp": "None",
+    "pp": "20 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Stun Spore",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Submission",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "80% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Super Fang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "Normal > Dark",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Supersonic",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "55% > 70%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Swagger",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 90%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Sweet Kiss",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "75% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Tail Slap",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Take Down",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Tearful Look",
+    "bp": "None",
+    "pp": "20 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Thunder",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "70% > 80%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Thunder Cage",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Thunder Fang",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "95% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Tickle",
+    "bp": "None",
+    "pp": "20 > 10",
+    "accuracy": "None",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Whirlpool",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "85% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Wrap",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  },
+  {
+    "move": "Zen Headbutt",
+    "bp": "None",
+    "pp": "None",
+    "accuracy": "90% > 100%",
+    "effect_chance": "None",
+    "type": "None",
+    "note_move": null,
+    "note": null
+  }
+]
