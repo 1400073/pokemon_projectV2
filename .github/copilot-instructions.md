@@ -1,73 +1,34 @@
 ## Quick context
 
-This repository mixes a fast Python battle engine (primary work) with a few JS/TS/Lua artifacts. The canonical simulator lives in the `pokemon-python/` package. The AI scoring policy for Run & Bun lives in `ai_policy.py` at the repo root and is tuned to the project's Run & Bun documents.
+- Root assets cover Run & Bun data/policy work, but almost every script expects the fast `pokemon-python/` simulator to exist as a sibling checkout plus the bundled `Pokemon_Trainer_Tournament_Simulator/` (Python CLI + patched Pokemon Showdown).
+- Always scope a change to one surface (sim/data, Run & Bun policy/config, or the tournament/Showdown toolchain) to avoid tangled diffs.
 
-Keep changes scoped to one language at a time. Most active development and tests are inside `pokemon-python/`.
+## Layout & surfaces
 
-## Architecture (big picture)
+- `pokemon-python/` — simulator entrypoints (`sim/sim.py`) and data loader (`data/dex.py`) plus the legacy `unittest` suite; clone it beside this repo before running anything.
+- `ai_policy.py` + `AI_Document_for_RnB*.txt` + `Mechanic Changes.txt` — Run & Bun heuristics; keep the documented probability splits and seed randomness when adding rules.
+- Run & Bun data (`runandbun.lua`, `gen8.js`, `trainer_data.json`, `moves_base.json`, `moves_index.py`, `species_index.py`) feed both Lua/JS clients and diff tooling.
+- `tools/` hosts validators (`rnb_diff.py`, `rnb_compare.py`, `rnb_diff_report.json`) that reconcile Run & Bun sources with `pokemon-python/data`.
+- `Pokemon_Trainer_Tournament_Simulator/` contains the batch pipeline (`Data/*.py`) and the `pokemon-showdown/` submodule (custom AI in `sim/examples/Simulation-test-1.ts`, request/schema tweaks in `sim/pokemon.ts` + `sim/side.ts`).
 
-- `pokemon-python/` — the battle engine and data. Key pieces:
-  - `pokemon-python/sim/` and `pokemon-python/sim/*.py` — simulation engine entry points (e.g. `sim.sim`, `sim.turn`). Use `new_battle`, `do_turn`, and `run` to drive sims.
-  - `pokemon-python/data/` — JSON-backed canonical game data (moves.json, pokedex.json, abilities.json, etc.). `pokemon-python/data/dex.py` wraps these as namedtuples/lookup structures (Decision, Action, Move, Pokemon).
-  - `pokemon-python/test/` — unit tests that validate simulator behaviour (uses Python's unittest).
+## Workflows
 
-- Root-level files like `moves.ts`, `species.ts`, `gen8.js`, and `runandbun.lua` are reference ports or tooling artifacts. Before editing them, confirm whether you should update the Python engine or the external artifact (they are separate targets).
+- `python rnb_custom_tests.py` exercises dex hydration plus deterministic one-turn/mechanic checks—run it after any simulator/data/policy change.
+- Broader simulator regressions live under `pokemon-python/test`; run `python -m unittest discover -s "pokemon-python/test"` or target a file as needed.
+- After touching data, regenerate reports with `python tools/rnb_diff.py` (counts) and `python tools/rnb_compare.py` (writes `tools/rnb_full_diff.json` suggestions).
+- Tournament runs (inside `Pokemon_Trainer_Tournament_Simulator`): `pip install -r requirements.txt`, then in `pokemon-showdown/` run `npm install` + `node build`, finally `python Data/BuildBattles.py` → `python Data/runSimulations.py` (tune `RUN_N_TIMES`, `noOfThreads`, `setLevel`).
 
-## Developer workflows
+## Conventions & integration
 
-- Run unit tests (discovery from repo root):
+- Data-first edits must update JSON (`pokemon-python/data/*.json`, `moves_base.json`, `trainer_data.json`) and their loaders (`data/dex.py`, `moves_index.py`, `species_index.py`) together so diff scripts stay green.
+- Use `dex.Decision` + `sim.structs.PokemonSet` for battle inputs, mirroring `rnb_custom_tests.py`, and disable RNG (`battle.rng = False` or `rng=False`) when asserting mechanics.
+- AI policy tweaks should cite the Run & Bun doc, keep 80/20-style weightings, and add deterministic coverage in either `pokemon-python/test` or `rnb_custom_tests`.
+- Maintain the schema expectations of `runandbun.lua`/`gen8.js` (`move = {}`, `mons = {}`, `SETDEX_SS` keys) because the diff tools rely on those regexes.
+- Showdown-side edits (AI or request payloads in `Simulation-test-1.ts`, `sim/pokemon.ts`, `sim/side.ts`) must be mirrored with a small `Data/runSimulations.py` test run to ensure the enriched fields still parse.
 
-```powershell
-python -m unittest discover -s "pokemon-python/test"
-```
+## Before you send a PR
 
-- Run a single test file:
-
-```powershell
-python -m unittest "pokemon-python/test/test_crit.py"
-```
-
-- Quick local simulation (via API): import the simulator from the `pokemon-python` package and call `sim.new_battle(...)`, `sim.choose(...)`, `sim.do_turn()` or `sim.run()` as shown in `pokemon-python/README.md`.
-
-## Project-specific conventions & patterns
-
-- Data-first model: canonical game state (moves, pokedex, items, formats) is stored as JSON under `pokemon-python/data/` and loaded early by `data/dex.py`. When adding fields, update both the JSON and the corresponding namedtuple mappings in `dex.py`.
-
-- Decision API: decisions are represented by `Decision` namedtuple (see `data/dex.py`) and `Action` objects. Use these when creating or testing player inputs.
-
-- Determinism for tests: many simulation functions accept `debug` and `rng` flags (see `sim/sim.py` and tests). For deterministic test runs, pass `rng=False` or seed RNG where available.
-
-- AI policy: `ai_policy.py` encodes a deterministic-ish scoring policy used by higher-level AIs. It is heavy on heuristics and random tie-breaking; if you change scoring, add targeted tests in `pokemon-python/test/` that assert outcomes or deterministic seeds.
-
-## Integration points and cross-component notes
-
-- JSON data files are the single source of truth for game data. Changes must stay backward-compatible for existing tests unless tests are intentionally updated.
-
-- The Python engine exposes a small API surface for driving battles (see `pokemon-python/sim/sim.py`). External tools (JS/TS/Lua) are NOT wired into the Python package automatically—treat them as separate.
-
-- Tests import simulator modules using package-style imports (e.g. `from sim.battle import Battle`) — prefer running tests via discovery from the repo root so imports resolve.
-
-## Useful file references (examples to open)
-
-- `ai_policy.py` — Run & Bun tuned AI scoring rules (use for AI changes / reference of expected behaviour).
-- `pokemon-python/README.md` — quick usage examples for the Python simulator (`new_battle`, `choose`, `do_turn`, `run`).
-- `pokemon-python/data/dex.py` — how JSON becomes runtime objects and Decision/Action namedtuples.
-- `pokemon-python/sim/sim.py` — public helper wrappers (`new_battle`, `choose`, `run`, `do_turn`).
-- `pokemon-python/test/` — tests showing expected behaviour (run them after edits).
-
-## Short checklist for edits
-
-1. If change touches gameplay or data: update JSON under `pokemon-python/data/` and `dex.py` mappings as needed.
-2. Add/modify unit tests under `pokemon-python/test/` using `unittest` and validate with discovery.
-3. For AI changes: update `ai_policy.py` and add a deterministic test (set `rng=False` where used).
-4. When modifying JS/TS/Lua files, confirm which project/component consumes them; do not assume the Python sim will pick up those edits.
-
-## When unsure — quick questions to ask in a PR
-
-- Is this change intended to affect the Python simulator or an external tool (TS/JS/Lua)?
-- Does the JSON schema in `pokemon-python/data/` need bumping? If so, include a small migration example in the PR.
-- Does the change require deterministic tests? If yes, add a test and use `rng=False` or seed the RNG.
-
----
-
-If you'd like, I can refine any section (for example add explicit test commands, note CI expectations, or extract frequently changed JSON keys). What should I expand or clarify?
+1. Run `python rnb_custom_tests.py` and any focused `python -m unittest pokemon-python/test/...` you touched.
+2. If Run & Bun data changed, rerun `python tools/rnb_diff.py` + `python tools/rnb_compare.py` and summarize key deltas from the new JSON reports.
+3. For tournament/Showdown edits, rebuild (`npm install; node build`) and run a small `python Data/runSimulations.py` batch; mention thread counts you used.
+4. Note explicitly when reviewers need to fetch `pokemon-python/` or rerun the Showdown build so bots don’t get stuck.

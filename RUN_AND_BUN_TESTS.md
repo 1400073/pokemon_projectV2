@@ -32,3 +32,24 @@ variables.
 As we implement more Run & Bun mechanics, add targeted asserts to the same file
 (or split out additional suites) so we keep deterministic coverage for every new
 feature.
+
+## AI vs. AI harness
+
+When you want to pit two trainers from `trainer_data.json` against each other
+using the Run & Bun AI policy, use `run_ai_vs_ai.py`. It shares the same
+bootstrap requirements as `rnb_custom_tests.py`, so make sure a sibling
+`pokemon-python/` checkout exists before launching battles.
+
+Example usage (don’t run until the simulator is available):
+
+```powershell
+python run_ai_vs_ai.py `
+  --trainer-a "Youngster Calvin@Brawly Split@single" `
+  --trainer-b "Bug Catcher Rick@Brawly Split@single" `
+  --battle-count 50
+```
+
+You can supply `--match "Trainer One|Trainer Two"` multiple times to queue a
+gauntlet and `--seed 1337` for reproducibility. The script surfaces clear error
+messages if it can’t locate the simulator state helpers so you know to clone
+`pokemon-python/` first.

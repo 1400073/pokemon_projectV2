@@ -12,9 +12,9 @@ import random
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Literal, Optional, Sequence, Tuple
 
-from data_loader import MoveData
-from damage import TYPE_CHART, calculate_damage, type_effectiveness
-from state import BattleState, PokemonState, SideState
+from data_loader import MoveData  # type: ignore
+from damage import calculate_damage, type_effectiveness  # type: ignore
+from state import BattleState, PokemonState, SideState  # type: ignore
 
 
 NON_DAMAGE_MOVE_BASE = 6
@@ -77,7 +77,7 @@ ATK_SPATK_DROP_MOVES = {
 }
 SPDEF_TWO_DROP_MOVES = {"Acid Spray"}
 
-RECOVERY_MOVES = {"Recover", "Slack Off", "Heal Order", "Soft-Boiled", "Roost", "Strength Sap"}
+RECOVERY_MOVES = {"Recover", "Slack Off", "Heal Order", "Soft-Boiled", "Roost", "Strength Sap", "Milk Drink", "Shore Up"}
 SUN_RECOVERY_MOVES = {"Morning Sun", "Synthesis", "Moonlight"}
 REST_MOVES = {"Rest"}
 
@@ -150,14 +150,44 @@ GENERAL_SETUP_MOVES = {
 }
 
 UNAWARE_IGNORED_MOVES = {"Power-up Punch", "Swords Dance", "Howl"}
-OFFENSIVE_SETUP_MOVES = {"Dragon Dance", "Shift Gear", "Swords Dance", "Howl", "Sharpen", "Meditate", "Hone Claws", "Power-up Punch", "Charge Beam", "Work Up", "Growth", "Curse", "No Retreat"}
+OFFENSIVE_SETUP_MOVES = {
+    "Dragon Dance",
+    "Shift Gear",
+    "Swords Dance",
+    "Howl",
+    "Sharpen",
+    "Meditate",
+    "Hone Claws",
+    "Power-up Punch",
+    "Charge Beam",
+    "Work Up",
+    "Growth",
+    "Curse",
+    "No Retreat",
+}
 DEFENSIVE_SETUP_MOVES = {"Acid Armor", "Barrier", "Cotton Guard", "Harden", "Iron Defense", "Stockpile", "Cosmic Power", "Stuff Cheeks"}
 MIXED_SETUP_MOVES = {"Bulk Up", "Calm Mind", "Coil", "Quiver Dance", "No Retreat"}
 BOTH_DEF_BOOST_MOVES = {"Cosmic Power", "Stockpile"}
 
 HEX_MOVES = {"Hex"}
 FLINCH_MOVES = {"Air Slash", "Bite", "Crunch", "Dark Pulse", "Fake Out", "Iron Head", "Rock Slide", "Waterfall", "Zen Headbutt", "Icicle Crash", "Stomp", "Headbutt"}
-SOUND_MOVES = {"Boomburst", "Bug Buzz", "Chatter", "Clanging Scales", "Clangorous Soul", "Disarming Voice", "Echoed Voice", "Hyper Voice", "Metal Sound", "Overdrive", "Relic Song", "Round", "Snarl", "Sparkling Aria", "Uproar"}
+SOUND_MOVES = {
+    "Boomburst",
+    "Bug Buzz",
+    "Chatter",
+    "Clanging Scales",
+    "Clangorous Soul",
+    "Disarming Voice",
+    "Echoed Voice",
+    "Hyper Voice",
+    "Metal Sound",
+    "Overdrive",
+    "Relic Song",
+    "Round",
+    "Snarl",
+    "Sparkling Aria",
+    "Uproar",
+}
 
 SLEEP_PREVENT_ABILITIES = {"Insomnia", "Vital Spirit", "Comatose", "Sweet Veil", "Purifying Salt"}
 PARALYZE_IMMUNE_ABILITIES = {"Limber"}
@@ -199,7 +229,7 @@ def _build_damage_snapshot(
     highest_roll = -1
     highest: List[MoveData] = []
 
-    for mv in moves:
+    for mv in moves or []:
         if not _is_damaging(mv):
             continue
 
@@ -1184,207 +1214,6 @@ def should_consider_switch(ai_active: PokemonState, ai_side: SideState, opp_acti
 
     return choose_switch_in(ai_side, opp_active, state, viable)
 
-
-def choose_ai_action(ai_side: SideState, opp_side: SideState, state: BattleState) -> Tuple[ActionType, Optional[MoveData], Optional[PokemonState]]:
-    ai_active = ai_side.active[0]
-    opp_active = opp_side.active[0]
-
-    switch_target = None
-    if state.field.game_type == "Singles":
-        switch_target = should_consider_switch(ai_active, ai_side, opp_active, state)
-
-    if switch_target is not None:
-        return "switch", None, switch_target
-
-    moves = ai_active.moves or []
-    if not moves:
-        return "move", None, opp_active
-
-    best_move, target = choose_move(ai_active, opp_active, state, moves)
-    return "move", best_move, target
-
-RECOVERY_MOVES = {
-    "Recover",
-    "Roost",
-    "Soft-Boiled",
-    "Slack Off",
-    "Milk Drink",
-    "Synthesis",
-    "Morning Sun",
-    "Moonlight",
-    "Shore Up",
-    "Heal Order",
-}
-
-BOOSTING_MOVES: Dict[str, Tuple[str, int]] = {
-    "Swords Dance": ("Atk", 2),
-    "Dragon Dance": ("Atk", 1),
-    "Bulk Up": ("Atk", 1),
-    "Calm Mind": ("SpA", 1),
-    "Nasty Plot": ("SpA", 2),
-    "Quiver Dance": ("SpA", 1),
-    "Coil": ("Atk", 1),
-    "Work Up": ("Atk", 1),
-}
-
-HAZARD_MOVES = {"Stealth Rock", "Spikes", "Toxic Spikes", "Sticky Web"}
-PHASING_MOVES = {"Roar", "Whirlwind", "Dragon Tail", "Circle Throw"}
-STATUS_LOCK_MOVES = {"Will-O-Wisp", "Thunder Wave", "Spore", "Sleep Powder", "Glare", "Toxic"}
-
-
-def _get_side_index(state: BattleState, mon: PokemonState) -> Optional[int]:
-    for idx, side in enumerate(state.sides):
-        if mon in side.active or mon in side.party:
-            return idx
-    return None
-
-
-def _expected_damage_percent(attacker: PokemonState, defender: PokemonState, move: MoveData, state: BattleState) -> Tuple[float, int, int]:
-    att_idx = _get_side_index(state, attacker)
-    def_idx = _get_side_index(state, defender)
-    dmg_min, dmg_max = calculate_damage(
-        attacker,
-        defender,
-        move,
-        state.field,
-        attacker_side_idx=att_idx,
-        defender_side_idx=def_idx,
-    )
-    accuracy = move.accuracy if move.accuracy else 100
-    avg = (dmg_min + dmg_max) / 2.0
-    expected = avg * (accuracy / 100.0)
-    percent = expected * 100.0 / max(1, defender.current_hp)
-    return percent, dmg_min, dmg_max
-
-
-def best_damage(attacker: PokemonState, defender: PokemonState, moves: List[MoveData], state: BattleState) -> Tuple[int, int]:
-    best_min = 0
-    best_max = 0
-    if not moves:
-        return 0, 0
-    for mv in moves:
-        if getattr(mv, "pp", 1) == 0:
-            continue
-        att_idx = _get_side_index(state, attacker)
-        def_idx = _get_side_index(state, defender)
-        mn, mx = calculate_damage(
-            attacker,
-            defender,
-            mv,
-            state.field,
-            attacker_side_idx=att_idx,
-            defender_side_idx=def_idx,
-        )
-        if mx > best_max:
-            best_max = mx
-            best_min = mn
-    return best_min, best_max
-
-def post_ko_switch_score(candidate: PokemonState, opp_mon: PokemonState, state: BattleState) -> int:
-    cand_hp = max(1, candidate.current_hp)
-    opp_hp = max(1, opp_mon.current_hp)
-
-    _, cand_to_opp_max = best_damage(candidate, opp_mon, candidate.moves, state)
-    _, opp_to_cand_max = best_damage(opp_mon, candidate, opp_mon.moves, state)
-
-    cand_spe = candidate.calc_stat("Spe")
-    opp_spe = opp_mon.calc_stat("Spe")
-    cand_faster = cand_spe > opp_spe
-    cand_slower = cand_spe < opp_spe
-
-    cand_ohko = cand_to_opp_max >= opp_hp
-    opp_ohko = opp_to_cand_max >= cand_hp
-
-    cand_pct = cand_to_opp_max * 100 // opp_hp if opp_hp > 0 else 0
-    opp_pct = opp_to_cand_max * 100 // cand_hp if cand_hp > 0 else 0
-
-    score = 0
-
-    # -1: slower and is OHKO’d
-    if cand_slower and opp_ohko:
-        score = -1
-    else:
-        # +5: faster and OHKO’s
-        if cand_faster and cand_ohko:
-            score = 5
-        # +4: slower, OHKO’s, and is not OHKO’d
-        elif cand_slower and cand_ohko and not opp_ohko:
-            score = 4
-        # +3 / +2: deals more % damage than it takes
-        elif cand_faster and cand_pct > opp_pct:
-            score = 3
-        elif cand_slower and cand_pct > opp_pct:
-            score = 2
-        # +1: just faster
-        elif cand_faster:
-            score = 1
-        else:
-            score = 0
-
-    # Ditto special case (+2)
-    if candidate.species == "Ditto":
-        score = max(score, 2)
-
-    # Wynaut / Wobbuffet (+2 if not worse)
-    if candidate.species in ["Wynaut", "Wobbuffet"] and not (cand_slower and opp_ohko):
-        score = max(score, 2)
-
-    return score
-
-def choose_switch_in(side: SideState, opp_mon: PokemonState, state: BattleState, candidates: Optional[List[PokemonState]] = None) -> Optional[PokemonState]:
-    if candidates is None:
-        candidates = [m for m in side.party if m.current_hp > 0 and m not in side.active]
-    if not candidates:
-        return None
-    best_score = -999
-    best_list: List[PokemonState] = []
-    for mon in candidates:
-        s = post_ko_switch_score(mon, opp_mon, state)
-        if s > best_score:
-            best_score = s
-            best_list = [mon]
-        elif s == best_score:
-            best_list.append(mon)
-    if not best_list:
-        return None
-    return random.choice(best_list)
-
-
-def matchup_score(attacker: PokemonState, defender: PokemonState, state: BattleState) -> int:
-    _, atk_max = best_damage(attacker, defender, attacker.moves, state)
-    _, def_max = best_damage(defender, attacker, defender.moves, state)
-    offense = atk_max * 100 // max(1, defender.current_hp)
-    defense = def_max * 100 // max(1, attacker.current_hp)
-    speed_bonus = 10 if attacker.calc_stat("Spe") > defender.calc_stat("Spe") else 0
-    return offense - defense + speed_bonus
-
-
-def should_consider_switch(ai_active: PokemonState, ai_side: SideState, opp_active: PokemonState, state: BattleState) -> Optional[PokemonState]:
-    bench = [m for m in ai_side.party if m.current_hp > 0 and m not in ai_side.active]
-    if not bench:
-        return None
-
-    best_move_score = max((score_move(ai_active, opp_active, mv, state) for mv in ai_active.moves or []), default=-999)
-    active_matchup = matchup_score(ai_active, opp_active, state)
-
-    best_candidate = None
-    best_candidate_score = active_matchup
-    for mon in bench:
-        cand_score = matchup_score(mon, opp_active, state)
-        if cand_score > best_candidate_score:
-            best_candidate_score = cand_score
-            best_candidate = mon
-
-    if best_candidate is None:
-        return None
-
-    improvement = best_candidate_score - active_matchup
-    if improvement < 8 and best_move_score >= 10:
-        return None
-
-    if random.random() < 0.7:
-        return best_candidate
-    return None
 
 def choose_ai_action(ai_side: SideState, opp_side: SideState, state: BattleState) -> Tuple[ActionType, Optional[MoveData], Optional[PokemonState]]:
     ai_active = ai_side.active[0]
